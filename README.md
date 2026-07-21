@@ -1,19 +1,19 @@
 # Medical Insurance Cost Prediction using Multiple Linear Regression
 
 ## Objective
-The objective of this project is to estimate the medical insurance charges of customers based on their personal and health-related information.This is achieved by developing a Multiple Linear Regression model to predict these charges.
+The purpose of this project is to predict the medical insurance charges for customers using their personal and health-related information. A Multiple Linear Regression model is used to accomplish this prediction task.
 
 ## Dataset Link
 Medical Cost Personal Insurance Dataset
 Kaggle Link: https://www.kaggle.com/datasets/mirichoi0218/insurance
 
 ## Task 1: Data Understanding
-Before developing the model, the dataset was loaded and analyzed to identify the types of features present:
+The dataset was loaded and analyzed to understand the types of features present:
 * **Numerical Features:** Age, BMI, Children
 * **Categorical Features:** Sex, Smoker, Region
 * **Target Variable:** Charges
 
-*(Note: The first five records were successfully loaded and visually verified during the initial script execution to confirm data integrity).*
+*(Note: The first five records were loaded and verified to confirm data is correct).*
 
 ## Libraries Used
 * Pandas
@@ -22,9 +22,9 @@ Before developing the model, the dataset was loaded and analyzed to identify the
 * Matplotlib
 
 ## Methodology
-1. **Data Preprocessing:** Checked the dataset for missing values and encoded the categorical variables (sex, smoker, region) to prepare them for the machine learning algorithm.The data was then split into 80% training and 20% testing sets.
-2. **Model Development:** Trained a Multiple Linear Regression model on the training data using the specified features (Age, Sex, BMI, Children, Smoker, Region) to predict the target variable (Charges).
-3. **Model Evaluation:** The trained model was used to predict charges on the unseen test dataset. Performance was quantified using standard regression metrics, and an Actual vs. Predicted scatter plot was generated to visually assess accuracy.
+1. **Data Preprocessing:** The dataset was checked for missing values. Categorical variables (sex, smoker, region) were encoded into numerical format. The data was then divided into 80% training and 20% testing sets.
+2. **Model Development:** A Multiple Linear Regression model was trained on the training data using the features Age, Sex, BMI, Children, Smoker, and Region to predict Charges.
+3. **Model Evaluation:** The trained model was used to make predictions on the test dataset. The performance was measured using standard regression metrics, and an Actual vs. Predicted scatter plot was created to visualize the model's accuracy.
 
 ## Results
 * **Mean Absolute Error (MAE):** *4181.19*
@@ -32,4 +32,4 @@ Before developing the model, the dataset was loaded and analyzed to identify the
 * **R-squared Score:** *0.7836*
 
 ## Conclusion
-The Multiple Linear Regression model successfully identifies the primary factors affecting insurance charges, with smoking status, age, and BMI acting as the most significant drivers of medical costs. Key findings indicate that as these risk factors increase, the predicted insurance charges rise accordingly.However, a notable limitation of Linear Regression for this problem is its core assumption of strictly linear relationships.In reality, health insurance costs often scale non-linearly; for example, the compounding effect of a high BMI combined with smoking triggers exponentially higher charges. A basic linear model struggles to perfectly capture these complex, synergistic interactions without the manual addition of polynomial or interaction terms, which leads to occasional underpredictions for extreme high-cost outliers.
+The Multiple Linear Regression model successfully identified the main factors that affect insurance charges. The most important factors are smoking status, age, and BMI. As these factors increase, the predicted insurance charges also increase. However, there is a limitation to using Linear Regression for this problem. The model assumes all relationships are linear. In reality, insurance costs do not always follow straight-line patterns. For example, when a customer has both a high BMI and is a smoker, the insurance charges increase much faster than expected. The basic linear model cannot capture these complex interactions without adding extra features. This sometimes results in lower predictions for customers with very high insurance costs.
